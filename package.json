@@ -1,0 +1,29 @@
+{
+  "name": "moo",
+  "version": "0.1.0",
+  "description": "moo is a mobile first, minimalist and modular css framework.",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-connect": "^2.3.1",
+    "gulp-ruby-sass": "^2.0.6",
+    "gulp-sass": "^2.1.1"
+  },
+  "scripts": {
+    "gulp":"gulp",
+    "run": "gulp run",
+    "build": "gulp build"
+  },
+  "keywords": [
+    "css","html5","mobile-first","responsive","minimalist"
+  ],
+  "author": "maxwell chiareli",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mchiareli/moo"
+  },
+  "bugs": {
+    "url": "https://github.com/mchiareli/moo/issues"
+  },
+}

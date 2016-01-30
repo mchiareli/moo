@@ -1,0 +1,26 @@
+/* global */
+
+$namespace : 'moo';
+
+/* grid defaults */
+$grid-columns: 4 !default;
+$grid-max-columns: 12 !default;
+$grid-padding: 8px;
+$grid-margin: 8px;
+
+/* grid desktop */
+$grid-desktop-breakpoint: 980px !default;
+$grid-desktop-columns: $grid-max-columns !default;
+$grid-desktop-padding: grid-padding !default;
+$grid-desktop-margin: $grid-margin !default;
+
+/* grid tablet */
+$grid-tablet-breakpoint: 740px !default;
+$grid-tablet-columns: 8 !default;
+$grid-tablet-padding: $grid-padding !default;
+$grid-tablet-margin: $grid-margin !default;
+
+/* grid phone (same as default) */
+$grid-phone-columns: $grid-columns !default;
+$grid-phone-padding: $grid-padding !default;
+$grid-phone-margin: $grid-margin !default;

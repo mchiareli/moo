@@ -1,0 +1,74 @@
+
+// Mixins for column width calculation.
+@mixin column-width($width, $columns, $padding:0px,$margin:0px) {
+  width: calc(#{(($width / $columns) * 100)+"%"} - ( #{$padding} + #{$margin} ));
+  .#{$namespace}-grid--no-space > & {
+    width: #{(($width / $columns) * 100)+"%"};
+  }
+}
+
+@mixin offset-size($size, $columns, $margin:0px) {
+  margin-left: calc(#{(($size / $columns) * 100)+"%"} + #{$margin} );
+  .#{$namespace}-grid.#{$namespace}-grid--no-space > & {
+    margin-left: #{(($size / $columns) * 100)+"%"};
+  }
+}
+
+// css definitions
+
+.#{$namespace}-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-content:flex-start;
+  justify-content: flex-start;
+  padding: $grid-phone-padding;
+}
+
+.#{$namespace}-grid--no-space {
+  padding: 0;
+}
+
+.#{$namespace}-grid {
+  justify-content: flex-start;
+  &--left{
+    justify-content: flex-start;
+  }
+  &--center{
+    justify-content: center;
+  }
+  &--right{
+    justify-content: flex-end;
+  }
+}
+
+.#{$namespace}-cell {
+    margin: $grid-phone-margin;
+    box-sizing: border-box;
+}
+
+// Define columns and offset size for mobile. (default)
+
+@for $i from 1 through ($grid-phone-columns) {
+  .#{$namespace}-cell--#{$i}-col,
+  .#{$namespace}-cell--#{$i}-col-phone.#{$namespace}-cell--#{$i}-col-phone {
+    @include column-width($i, $grid-phone-columns, $grid-phone-padding,$grid-phone-margin);
+  }
+}
+
+@for $i from 1 through ($grid-phone-columns) {
+  .#{$namespace}-cell--#{$i}-col,
+  .#{$namespace}-cell--#{$i}-col-phone.#{$namespace}-cell--#{$i}-col-phone {
+    @include column-width($i, $grid-phone-columns, $grid-phone-padding,$grid-phone-margin);
+  }
+}
+
+@for $i from 1 through ($grid-phone-columns - 1) {
+  .#{$namespace}-cell--#{$i}-offset,
+  .#{$namespace}-cell--#{$i}-offset-phone.#{$namespace}-cell--#{$i}-offset-phone {
+    @include offset-size($i, $grid-phone-columns,$grid-phone-margin);
+  }
+}
+
+.#{$namespace}-grid--no-space > .#{$namespace}-cell {
+  margin: 0;
+}

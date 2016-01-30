@@ -1,0 +1,17 @@
+@mixin media($min:false,$max:false){
+
+  $media-query:'';
+
+  @if $min-width and $max-width {
+    $media-query: '(min-width: #{$min-width}) and (max-width: #{$max-width - 1})';
+  }@else if $min-width {
+    $media-query: '(min-width: #{$min-width})';
+  }@else if $max-width {
+    $media-query: '(max-width: #{$max-width - 1})';
+  }
+
+  @media #{$media-query} {
+    @content;
+  }
+
+}
