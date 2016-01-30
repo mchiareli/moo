@@ -1,4 +1,4 @@
-@mixin media($min:false,$max:false){
+@mixin media($min-width:false,$max-width:false){
 
   $media-query:'';
 

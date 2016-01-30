@@ -14,18 +14,21 @@
   }
 }
 
-// css definitions
+@mixin full($padding:0px,$margin:0px) {
+  @include column-width(1, 1, $padding,$margin);
+}
 
+// CSS definitions for grid
 .#{$namespace}-grid {
   display: flex;
   flex-wrap: wrap;
-  align-content:flex-start;
-  justify-content: flex-start;
-  padding: $grid-phone-padding;
 }
 
-.#{$namespace}-grid--no-space {
-  padding: 0;
+.#{$namespace}-grid {
+  padding: $grid-phone-padding;
+  &--no-space {
+    padding: 0;
+  }
 }
 
 .#{$namespace}-grid {
@@ -41,13 +44,17 @@
   }
 }
 
+// CSS definitions for cells
 .#{$namespace}-cell {
     margin: $grid-phone-margin;
     box-sizing: border-box;
 }
 
-// Define columns and offset size for mobile. (default)
+.#{$namespace}-grid--no-space > .#{$namespace}-cell {
+  margin: 0;
+}
 
+// CSS definitions mobile. (default)
 @for $i from 1 through ($grid-phone-columns) {
   .#{$namespace}-cell--#{$i}-col,
   .#{$namespace}-cell--#{$i}-col-phone.#{$namespace}-cell--#{$i}-col-phone {
@@ -55,10 +62,11 @@
   }
 }
 
-@for $i from 1 through ($grid-phone-columns) {
+// phone has 4 cells, more than that will be set as 100%.
+@for $i from ($grid-phone-columns + 1) through $grid-desktop-columns {
   .#{$namespace}-cell--#{$i}-col,
   .#{$namespace}-cell--#{$i}-col-phone.#{$namespace}-cell--#{$i}-col-phone {
-    @include column-width($i, $grid-phone-columns, $grid-phone-padding,$grid-phone-margin);
+    @include full($grid-phone-padding,$grid-phone-margin);
   }
 }
 
@@ -69,6 +77,39 @@
   }
 }
 
-.#{$namespace}-grid--no-space > .#{$namespace}-cell {
-  margin: 0;
-}
+@include tablet {
+  @for $i from 1 through ($grid-tablet-columns) {
+    .#{$namespace}-cell--#{$i}-col,
+    .#{$namespace}-cell--#{$i}-col-tablet.#{$namespace}-cell--#{$i}-col-tablet {
+      @include column-width($i, $grid-tablet-columns, $grid-tablet-padding,$grid-tablet-margin);
+    }
+  }
+  // tablet has 8 cells, more than that will be set as 100%.
+  @for $i from ($grid-tablet-columns + 1) through $grid-desktop-columns {
+    .#{$namespace}-cell--#{$i}-col,
+    .#{$namespace}-cell--#{$i}-col-tablet.#{$namespace}-cell--#{$i}-col-tablet {
+      @include full($grid-tablet-padding,$grid-tablet-margin);
+    }
+  }
+  @for $i from 1 through ($grid-phone-columns - 1) {
+    .#{$namespace}-cell--#{$i}-offset,
+    .#{$namespace}-cell--#{$i}-offset-tablet.#{$namespace}-cell--#{$i}-offset-tablet {
+      @include offset-size($i, $grid-tablet-columns,$grid-tablet-margin);
+    }
+  }
+};
+
+@include desktop {
+  @for $i from 1 through ($grid-desktop-columns) {
+    .#{$namespace}-cell--#{$i}-col,
+    .#{$namespace}-cell--#{$i}-col-desktop.#{$namespace}-cell--#{$i}-col-desktop {
+      @include column-width($i, $grid-desktop-columns, $grid-desktop-padding,$grid-desktop-margin);
+    }
+  }
+  @for $i from 1 through ($grid-desktop-columns - 1) {
+    .#{$namespace}-cell--#{$i}-offset,
+    .#{$namespace}-cell--#{$i}-offset-desktop.#{$namespace}-cell--#{$i}-offset-desktop {
+      @include offset-size($i, $grid-desktop-columns,$grid-desktop-margin);
+    }
+  }
+};

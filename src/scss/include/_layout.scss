@@ -2,6 +2,26 @@ body {
   padding: 24px;
 }
 
+pre, xmp, plaintext, listing {
+  margin: 0;
+}
+
 .#{$namespace}-layout--no-space {
   padding: 0px;
+}
+
+.#{$namespace}-layout--hide,.#{$namespace}-layout--phone-hide {
+  display: none !important;
+}
+
+@include tablet {
+  .#{$namespace}-layout--tablet-hide {
+    display: none !important;
+  }
+}
+
+@include desktop {
+  .#{$namespace}-layout--desktop-hide {
+    display: none !important;
+  }
 }

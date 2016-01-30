@@ -6,16 +6,22 @@
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-connect": "^2.3.1",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-ruby-sass": "^2.0.6",
     "gulp-sass": "^2.1.1"
   },
   "scripts": {
-    "gulp":"gulp",
+    "gulp": "gulp",
     "run": "gulp run",
-    "build": "gulp build"
+    "build": "gulp build",
+    "publish-vendor": "gulp publish-vendor"
   },
   "keywords": [
-    "css","html5","mobile-first","responsive","minimalist"
+    "css",
+    "html5",
+    "mobile-first",
+    "responsive",
+    "minimalist"
   ],
   "author": "maxwell chiareli",
   "license": "MIT",
@@ -25,5 +31,5 @@
   },
   "bugs": {
     "url": "https://github.com/mchiareli/moo/issues"
-  },
+  }
 }

@@ -1,0 +1,17 @@
+//fluent mixins based on device name.
+
+@mixin phone {
+    //phone does not have a breakpoint because is the default layout in moo.
+    //this mixin will be used in case we want to change in the phone behavior in the future.
+    @content;
+}
+@mixin tablet {
+  @include media($breakpoint-tablet,$breakpoint-desktop) {
+    @content;
+  }
+}
+@mixin desktop {
+  @include media($breakpoint-desktop) {
+    @content;
+  }
+}
