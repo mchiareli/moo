@@ -10,7 +10,7 @@
         <link rel="stylesheet" type="text/css" href="css/site.css"/>
     </head>
     <body>
-      <h1>moo-grid</h1>
+      <h1>Grid</h1>
       <section class="description">
         <p>MooGrid is a mobile first and full responsive grid with, it doesn't have fixed width, but you can set one if needed.</p>
         <p>
@@ -122,16 +122,32 @@
           ** 1/3 means phone/desktop
         </p>
       </section>
-      <!-- <h1>Alignment</h1>
+      <h1>Cell Alignment</h1>
+      <section class="description">
+        <p>You can change the cells alignment adding the align modifier (<strong>--center</strong>/<strong>--right</strong>) in the <strong>moo-grid</strong> element.</p>
+        <p>
+          <code class="prettyprint lang-html">
+            &lt;div class=&quot;moo-grid moo-grid--center&quot;&gt;2&lt;/div&gt;<br/>
+            &lt;div class=&quot;moo-grid moo-grid--center&quot;&gt;2&lt;/div&gt;
+          </code>
+        </p>
+      </section>
       <div class="grid moo-grid moo-grid--center">
-        <div class="moo-cell moo-cell--1-col">moo-cell moo-cell--1-col</div>
-        <div class="moo-cell moo-cell--1-col">moo-cell moo-cell--1-col</div>
+        <div class="moo-cell moo-cell--2-col">2</div>
+        <div class="moo-cell moo-cell--2-col">2</div>
       </div>
-      <h1 class="moo-tablet--hide">moo-grid moo-grid--right</h1>
+      <section class="description">
+        <p>
+          <code class="prettyprint lang-html">
+            &lt;div class=&quot;moo-grid moo-grid--right&quot;&gt;1&lt;/div&gt;<br/>
+            &lt;div class=&quot;moo-grid moo-grid--right&quot;&gt;2&lt;/div&gt;
+          </code>
+        </p>
+      </section>
       <div class="grid moo-grid moo-grid--right">
-        <div class="moo-cell moo-cell--1-col">moo-cell moo-cell--1-col</div>
-        <div class="moo-cell moo-cell--1-col">moo-cell moo-cell--1-col</div>
-      </div> -->
+        <div class="moo-cell moo-cell--1-col">1</div>
+        <div class="moo-cell moo-cell--2-col">2</div>
+      </div>
       <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
     </body>
 </html>

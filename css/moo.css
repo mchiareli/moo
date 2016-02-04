@@ -354,7 +354,9 @@ th {
   padding: 0; }
 
 /* global */
+/* typo */
 /* breakpoints */
+/* layout */
 /* grid defaults */
 /* grid desktop */
 /* grid tablet */
@@ -362,14 +364,20 @@ th {
 body {
   padding: 24px; }
 
-pre, xmp, plaintext, listing {
-  margin: 0; }
+.moo-layout {
+  padding: 24px;
+  display: flex;
+  flex-direction: column; }
 
 .moo-layout--no-space {
   padding: 0px; }
 
-.moo-layout--hide, .moo-layout--phone-hide {
+.moo-layout--hide {
   display: none !important; }
+
+@media (max-width: 739px) {
+  .moo-layout--phone-hide {
+    display: none !important; } }
 
 @media (min-width: 740px) and (max-width: 979px) {
   .moo-layout--tablet-hide {
