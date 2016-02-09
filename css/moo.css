@@ -369,6 +369,15 @@ body {
   display: flex;
   flex-direction: column; }
 
+.moo-layout--reverse, .moo-layout--column-reverse {
+  flex-direction: column-reverse; }
+
+.moo-layout--row {
+  flex-direction: row; }
+
+.moo-layout--row-reverse {
+  flex-direction: row-reverse; }
+
 .moo-layout--no-space {
   padding: 0px; }
 
@@ -404,6 +413,9 @@ body {
     justify-content: center; }
   .moo-grid--right {
     justify-content: flex-end; }
+
+.moo-grid--vgrow {
+  align-items: stretch; }
 
 .moo-cell {
   margin: 8px;
