@@ -2,16 +2,33 @@ body {
   padding: 24px;
 }
 
-pre, xmp, plaintext, listing {
-  margin: 0;
+.#{$namespace}-layout {
+    padding: $layout-body-padding;
+    display: flex;
+    flex-direction: column;
+}
+.#{$namespace}-layout--reverse,.#{$namespace}-layout--column-reverse {
+  flex-direction: column-reverse;
+}
+.#{$namespace}-layout--row {
+  flex-direction: row;
+}
+.#{$namespace}-layout--row-reverse {
+  flex-direction: row-reverse;
 }
 
 .#{$namespace}-layout--no-space {
   padding: 0px;
 }
 
-.#{$namespace}-layout--hide,.#{$namespace}-layout--phone-hide {
+.#{$namespace}-layout--hide {
   display: none !important;
+}
+
+@include phone {
+  .#{$namespace}-layout--phone-hide {
+    display: none !important;
+  }
 }
 
 @include tablet {

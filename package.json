@@ -11,8 +11,7 @@
     "gulp-sass": "^2.1.1"
   },
   "scripts": {
-    "gulp": "gulp",
-    "run": "gulp run",
+    "dev": "gulp run",
     "build": "gulp build",
     "publish-vendor": "gulp publish-vendor"
   },

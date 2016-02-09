@@ -44,6 +44,12 @@
   }
 }
 
+.#{$namespace}-grid {
+  &--vgrow {
+    align-items: stretch;
+  }
+}
+
 // CSS definitions for cells
 .#{$namespace}-cell {
     margin: $grid-phone-margin;

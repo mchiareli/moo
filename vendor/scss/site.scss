@@ -9,7 +9,13 @@ h1 {
 }
 
 p > code {
-  margin-left: 36px;  
+  // margin-left: 36px;
+}
+
+.description {
+  > .ps {
+    font-size: 12px;
+  }
 }
 
 .moo-cell{

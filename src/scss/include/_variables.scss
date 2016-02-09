@@ -2,9 +2,18 @@
 
 $namespace : 'moo';
 
+/* typo */
+$font-body-family:"'Helvetica Neue', Helvetica, Arial, sans-serif";
+$font-body-color:'#444';
+$font-header-family:"'Helvetica Neue', Helvetica, Arial, sans-serif'";
+$font-header-color:'#222';
+
 /* breakpoints */
 $breakpoint-tablet: 740px !default;
 $breakpoint-desktop: 980px !default;
+
+/* layout */
+$layout-body-padding:24px;
 
 /* grid defaults */
 $grid-columns: 4 !default;

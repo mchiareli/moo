@@ -1,5 +1,7 @@
-@mixin media($min-width:false,$max-width:false){
+@mixin media($from:false,$to:false){
 
+  $min-width: $from;
+  $max-width: $to;
   $media-query:'';
 
   @if $min-width and $max-width {

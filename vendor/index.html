@@ -10,7 +10,7 @@
         <link rel="stylesheet" type="text/css" href="css/site.css"/>
     </head>
     <body>
-      <h1>moo-grid</h1>
+      <h1>Grid</h1>
       <section class="description">
         <p>MooGrid is a mobile first and full responsive grid with, it doesn't have fixed width, but you can set one if needed.</p>
         <p>
@@ -52,9 +52,9 @@
         <div class="moo-cell moo-cell--2-col">2</div>
         <div class="moo-cell moo-cell--2-col">2</div>
         <div class="moo-cell moo-cell--3-col">3</div>
+        <div class="moo-cell moo-cell--3-col moo-cell--1-col-phone">1/3**</div>
         <div class="moo-cell moo-cell--3-col">3</div>
-        <div class="moo-cell moo-cell--3-col">3</div>
-        <div class="moo-cell moo-cell--3-col">3</div>
+        <div class="moo-cell moo-cell--3-col moo-cell--1-col-phone">1/3**</div>
         <div class="moo-cell moo-cell--4-col">4</div>
         <div class="moo-cell moo-cell--4-col">4</div>
         <div class="moo-cell moo-cell--4-col">4</div>
@@ -62,8 +62,21 @@
         <div class="moo-cell moo-cell--6-col">6</div>
         <div class="moo-cell moo-cell--12-col">12</div>
       </div>
-      <h1>Grid gapping </h1>
       <section class="description">
+        <p  class="ps">
+          ** 1/3 means phone/desktop
+        </p>
+        <p>You can specify multiple sizes for a cell based on current device</p>
+        <p>
+          <code class="prettyprint lang-html">
+            &lt;div class=&quot;moo-cell moo-cell--3-col moo-cell--4-col-phone&quot;&gt;1/3&lt;/div&gt;<br/>
+            &lt;div class=&quot;moo-cell moo-cell--3-col moo-cell--4-col-phone&quot;&gt;1/3&lt;/div&gt;<br/>
+            &lt;div class=&quot;moo-cell moo-cell--3-col moo-cell--4-col-phone&quot;&gt;1/3&lt;/div&gt;
+          </code>
+        </p>
+      </section>
+      <h1>Grid gapping </h1>
+      <section class="descripton">
         <p>
           To remove the gapping between elements use the modifier <strong>--no-space</strong>.
         </p>
@@ -94,9 +107,9 @@
         <div class="moo-cell moo-cell--2-col">2</div>
         <div class="moo-cell moo-cell--2-col">2</div>
         <div class="moo-cell moo-cell--3-col">3</div>
+        <div class="moo-cell moo-cell--3-col moo-cell--1-col-phone">1/3</div>
         <div class="moo-cell moo-cell--3-col">3</div>
-        <div class="moo-cell moo-cell--3-col">3</div>
-        <div class="moo-cell moo-cell--3-col">3</div>
+        <div class="moo-cell moo-cell--3-col moo-cell--1-col-phone">1/3</div>
         <div class="moo-cell moo-cell--4-col">4</div>
         <div class="moo-cell moo-cell--4-col">4</div>
         <div class="moo-cell moo-cell--4-col">4</div>
@@ -104,16 +117,63 @@
         <div class="moo-cell moo-cell--6-col">6</div>
         <div class="moo-cell moo-cell--12-col">12</div>
       </div>
-      <!-- <h1>Alignment</h1>
+      <section class="description">
+        <p  class="ps">
+          ** 1/3 means phone/desktop
+        </p>
+      </section>
+      <h1>Cell Alignment</h1>
+      <section class="description">
+        <p>You can change the cells alignment adding the align modifier (<strong>--center</strong>/<strong>--right</strong>) in the <strong>moo-grid</strong> element.</p>
+        <p>
+          <code class="prettyprint lang-html">
+            &lt;div class=&quot;moo-grid moo-grid--center&quot;&gt;</br>
+            &lt;div class=&quot;moo-cell moo-cell--2-col&quot;&gt;2&lt;/div&gt;</br>
+            &lt;div class=&quot;moo-cell moo-cell--2-col&quot;&gt;2&lt;/div&gt;</br>
+            &lt;/div&gt;
+          </code>
+        </p>
+      </section>
       <div class="grid moo-grid moo-grid--center">
-        <div class="moo-cell moo-cell--1-col">moo-cell moo-cell--1-col</div>
-        <div class="moo-cell moo-cell--1-col">moo-cell moo-cell--1-col</div>
+        <div class="moo-cell moo-cell--2-col">2</div>
+        <div class="moo-cell moo-cell--2-col">2</div>
       </div>
-      <h1 class="moo-tablet--hide">moo-grid moo-grid--right</h1>
+      <section class="description">
+        <p>
+          <code class="prettyprint lang-html">
+            &lt;div class=&quot;moo-grid moo-grid--right&quot;&gt;</br>
+            &lt;div class=&quot;moo-cell moo-cell--2-col&quot;&gt;2&lt;/div&gt;</br>
+            &lt;div class=&quot;moo-cell moo-cell--2-col&quot;&gt;2&lt;/div&gt;</br>
+            &lt;/div&gt;
+          </code>
+        </p>
+      </section>
       <div class="grid moo-grid moo-grid--right">
-        <div class="moo-cell moo-cell--1-col">moo-cell moo-cell--1-col</div>
-        <div class="moo-cell moo-cell--1-col">moo-cell moo-cell--1-col</div>
-      </div> -->
+        <div class="moo-cell moo-cell--1-col">1</div>
+        <div class="moo-cell moo-cell--2-col">2</div>
+      </div>
+      <h1>Cell vertical size</h1>
+      <section class="description">
+        <p>
+          You make all cells grow vertically to have the same height based in the biggest value using the modifier <strong>--vgrow</strong>
+        </p>
+        <p>
+          <code class="prettyprint lang-html">
+            &lt;div class=&quot;moo-grid moo-grid--vgrow&quot;&gt;</br>
+            &lt;div class=&quot;moo-cell moo-cell--6-col&quot;&gt;2&lt;/div&gt;</br>
+            &lt;div class=&quot;moo-cell moo-cell--6-col&quot;&gt;2&lt;/div&gt;</br>
+            &lt;/div&gt;
+          </code>
+        </p>
+      </section>
+      <div class="moo-grid moo-grid--vgrow">
+        <div class="moo-cell moo-cell--2-col" style="height:auto">2</div>
+        <div class="moo-cell moo-cell--2-col" style="height:auto;">2</div>
+        <div class="moo-cell moo-cell--2-col" style="height:100px">2</div>
+        <div class="moo-cell moo-cell--2-col" style="height:auto;">2</div>
+        <div class="moo-cell moo-cell--2-col" style="height:auto;">2</div>
+        <div class="moo-cell moo-cell--2-col" style="height:auto;">2</div>
+      </div>
       <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
     </body>
 </html>
