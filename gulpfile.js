@@ -14,7 +14,7 @@ gulp.task('server',['watch'],function() {
       root: 'dist',
       livereload: true,
       port:8000,
-      debug:true
+      debug:false
     }
   );
 });

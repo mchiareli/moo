@@ -1,0 +1,36 @@
+.#{$namespace}-navbar {
+  height: $navbar-default-size;
+  display: flex;
+  align-items: center;
+  padding: 0 $navbar-default-padding 0 $navbar-default-padding;
+  * {
+    border-radius: 2px;
+    text-decoration: none;
+    color: inherit !important;
+    // margin: 0 8px 0 8px;
+    padding: 5px;
+  }
+  *:hover:not(.#{$namespace}-navbar__spacer) {
+   background-color: rgba(255,255,255,.5);
+  }
+}
+.#{$namespace}-navbar--md {
+    height: $navbar-default-size * 2;
+}
+.#{$namespace}-navbar--lg {
+    height: $navbar-default-size * 4;
+}
+
+.#{$namespace}-navbar--shadow {
+    box-shadow: 0px 1px 10px #000000;
+    &-sm {
+        box-shadow: 0px 1px 5px #000000;
+    }
+    &-lg {
+        box-shadow: 0px 1px 15px #000000;
+    }
+}
+
+.#{$namespace}-navbar__spacer {
+  flex-grow: 1;
+}

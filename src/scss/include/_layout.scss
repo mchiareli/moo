@@ -1,12 +1,17 @@
-body {
-  padding: 24px;
-}
-
+//layout
 .#{$namespace}-layout {
-    padding: $layout-body-padding;
+    // padding: $layout-body-padding;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
 }
+
+.#{$namespace}-layout--full {
+  height: 100%;
+}
+
 .#{$namespace}-layout--reverse,.#{$namespace}-layout--column-reverse {
   flex-direction: column-reverse;
 }
@@ -19,6 +24,10 @@ body {
 
 .#{$namespace}-layout--no-space {
   padding: 0px;
+}
+
+.#{$namespace}-layout--padding {
+  padding: $layout-body-padding;
 }
 
 .#{$namespace}-layout--hide {
