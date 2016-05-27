@@ -17,3 +17,21 @@
   }
 
 }
+
+@mixin phone {
+  @include media($to:$breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @include media($breakpoint-tablet,$breakpoint-desktop) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @include media($breakpoint-desktop) {
+    @content;
+  }
+}

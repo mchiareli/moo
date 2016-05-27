@@ -3,14 +3,14 @@
   display: flex;
   align-items: center;
   padding: 0 $navbar-default-padding 0 $navbar-default-padding;
-  * {
+  a {
     border-radius: 2px;
     text-decoration: none;
     color: inherit !important;
     // margin: 0 8px 0 8px;
     padding: 5px;
   }
-  *:hover:not(.#{$namespace}-navbar__spacer) {
+  a:hover:not(.#{$namespace}-navbar__spacer) {
    background-color: rgba(255,255,255,.5);
   }
 }
