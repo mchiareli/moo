@@ -1,4 +1,5 @@
 .#{$namespace}-navbar {
+  background-color: $navbar-default-color;
   height: $navbar-default-size;
   display: flex;
   align-items: center;
@@ -14,11 +15,21 @@
    background-color: rgba(255,255,255,.5);
   }
 }
+
+.#{$namespace}-navbar__logo {
+  height: 28px;
+  width: auto;
+}
+
 .#{$namespace}-navbar--md {
-    height: $navbar-default-size * 2;
+    height: $navbar-md-size;
+    .#{$namespace}-navbar__logo {
+      height: 40px;
+      width: auto;
+    }
 }
 .#{$namespace}-navbar--lg {
-    height: $navbar-default-size * 4;
+    height: $navbar-lg-size;
 }
 
 .#{$namespace}-navbar--shadow {

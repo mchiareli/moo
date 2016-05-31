@@ -32,11 +32,16 @@ gulp.task('build-framework',function() {
     .pipe(browserSync.stream());
 });
 
-gulp.task('build-site',['build-site-css','build-site-html']);
+gulp.task('build-site',['build-site-css','build-site-html','build-site-assets']);
 
 gulp.task('publish-site',['build'],function(){
-  return gulp.src("./dist/**/*")
+  return gulp.src("./dist/**")
     .pipe(deploy());
+});
+
+gulp.task('build-site-assets',function() {
+   gulp.src('src/site/img/**')
+      .pipe(gulp.dest('./dist/img'));
 });
 
 gulp.task('build-site-html',function() {

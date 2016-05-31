@@ -1,14 +1,19 @@
 /* global */
 $namespace : 'moo';
 
-/* typo */
-$font-body-family:"Sans-Serif";
-$font-body-weight:300;
-$font-body-color:'#444';
+/* defaults */
+// $body-default-color:#f5f5f5;
+$body-default-color:#ecf0f1;
+$body-default-padding:18px;
 
-$font-header-family:"'Helvetica Neue', Helvetica, Arial, sans-serif";
+/* typo */
+$font-body-family:Sans-Serif;
+$font-body-weight:300;
+$font-body-color:#444;
+
+$font-header-family:'Proxima Nova','Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-header-weight:300;
-$font-header-color:'#222';
+$font-header-color:#222;
 
 /* breakpoints */
 $breakpoint-tablet: 740px !default;
@@ -18,9 +23,13 @@ $breakpoint-desktop: 980px !default;
 $layout-body-padding:24px;
 
 /* navbar */
+$navbar-default-color:#2980b9;
 $navbar-default-size:45px;
 $navbar-default-padding:16px;
 $navbar-default-margin:8px;
+
+$navbar-md-size: $navbar-default-size * 2;
+$navbar-lg-size: $navbar-default-size * 4;
 
 /* grid defaults */
 $grid-columns: 4 !default;

@@ -1,35 +1,8 @@
-body {
-  background-color: #f5f5f5;
-  padding: 18px;
+.logo {
+  font-family: 'Pacifico', cursive;
+  color: #fff;
+  font-size: 28px;
 }
-
-h1 {
-  color: #424242;
-  padding-bottom: 8px;
-  border-bottom: #222 dashed thin;
-}
-
-p > code {
-  // margin-left: 36px;
-}
-
-.description {
-  > .ps {
-    font-size: 12px;
-  }
-}
-
-.moo-cell{
-      height: 50px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #ffffff;
-    //   font-weight: bold;
-      background-color: #212121;
-}
-
-.moo-grid--no-space > .moo-cell:not(:last-child) {
-  border-left: #ffffff solid thin;
-  border-bottom: #ffffff solid thin;
+.logo > a::after{
+  content: "M";
 }
