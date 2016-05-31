@@ -12,6 +12,11 @@
   height: 100%;
 }
 
+.#{$namespace}-layout--center {
+  justify-content: center;
+  align-items: center;
+}
+
 .#{$namespace}-layout--reverse,.#{$namespace}-layout--column-reverse {
   flex-direction: column-reverse;
 }
