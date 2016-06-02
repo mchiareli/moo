@@ -2,3 +2,11 @@ body {
   background-color: $body-default-color;
   // padding: $body-default-padding;
 }
+
+a {
+  color: inherit;
+}
+
+a,a:hover{
+  text-decoration: none;
+}
